@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak — M. Teuku Pariz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="ripple-canvas"></canvas>
+
+<nav class="nav">
+  <div class="nav-brand">Pariz<span class="dot">.</span></div>
+  <div class="nav-links">
+    <div class="liquidGlass-wrapper dock">
+      <div class="liquidGlass-effect"></div>
+      <div class="liquidGlass-tint"></div>
+      <div class="liquidGlass-shine"></div>
+      <div class="liquidGlass-text">
+        <div class="dock-inner">
+          <a href="index.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1"/></svg>
+            <span>Beranda</span>
+          </a>
+          <a href="pendidikan.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            <span>Pendidikan</span>
+          </a>
+          <a href="keahlian.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            <span>Keahlian</span>
+          </a>
+          <a href="kontak.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Kontak</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <svg style="display:none">
+      <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="1" seed="5" result="turbulence"/>
+        <feComponentTransfer in="turbulence" result="mapped">
+          <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5"/>
+          <feFuncG type="gamma" amplitude="0" exponent="1" offset="0"/>
+          <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5"/>
+        </feComponentTransfer>
+        <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap"/>
+        <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lighting-color="white" result="specLight">
+          <fePointLight x="-200" y="-200" z="300"/>
+        </feSpecularLighting>
+        <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage"/>
+        <feDisplacementMap in="SourceGraphic" in2="softMap" scale="150" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
+  </div>
+</nav>
+
+<main class="wrap">
+  <span class="eyebrow">Kontak</span>
+  <h2 class="section-title">Mari Terhubung</h2>
+  <p class="section-sub">Punya proyek atau sekadar mau ngobrol soal mancing? Kirim pesan lewat form di bawah.</p>
+
+  <div class="contact-grid">
+
+    <div class="contact-info glass">
+      <div class="contact-row">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <div>
+          <div class="label">Domisili</div>
+          <div class="value">Kedungwuni, Pekalongan, Jawa Tengah</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <div>
+          <div class="label">Pesan langsung</div>
+          <div class="value">Gunakan form di samping</div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <div>
+          <div class="label">Waktu respon</div>
+          <div class="value">Biasanya dalam 1–2 hari</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-panel glass">
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" placeholder="Nama kamu" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="kamu@email.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" placeholder="Tulis pesanmu di sini..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Kirim Pesan</button>
+        <div id="form-status"></div>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<footer>© <span id="year"></span> M. Teuku Pariz — dibuat dengan HTML, CSS, JS &amp; Python.</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
